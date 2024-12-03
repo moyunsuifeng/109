@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Four Cards Layout with Background Video</title>
+<style>
+  body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  a {
+    text-decoration: none;
+  }
+  .title {
+    text-align: center;
+    font-size: 45px;
+    color: #aebec5;
+    margin-top: 11%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .title a{
+    font-size: 35px;
+    color: #a4c6d4;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .card a {
+    color: rgb(16, 16, 16);
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .card h3 {
+    margin-top: 10px;
+    color: rgb(62, 62, 64);
+  }
+  .background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+  }
+</style>
+</head>
+<body>
+<video autoplay muted loop id="background-video" class="background-video">
+  <source src="..\img/山晚-三叶-最终.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+<div class="title">109寝室<br><a href="">返回班级</a></div>
+<div class="card-container">
+  <a href="..\lwh875\web\index.html" class="card">
+    <img src="image1.jpg" alt="Card Image 1">
+    <h3>李伟昊</h3>
+  </a>
+  <a href="https://example.com" class="card">
+    <img src="image2.jpg" alt="Card Image 2">
+    <h3>许章翔</h3>
+  </a>
+  <a href="https://example.com" class="card">
+    <img src="image3.jpg" alt="Card Image 3">
+    <h3>王铎博</h3>
+  </a>
+  <a href="../lhy879/indexlhy879.html" class="card">
+    <img src="image4.jpg" alt="Card Image 4">
+    <h3>龙昊源</h3>
+  </a>
+</div>
+</body>
+</html>
+
